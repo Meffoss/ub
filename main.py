@@ -289,19 +289,22 @@ async def type_handler(event):
         await event.edit(tbp)
         await asyncio.sleep(0.1)
 
+@client.on(events.NewMessage(outgoing=True, pattern=r"\.ncall (.+)"))
+async def ncall_handler(event):
+    text = event.pattern_match.group(1)
+    chat_id = event.message.chat_id
+    members = await client.get_participants(chat_id)
+    member_list = [
+        f"<a href=\"tg://user?id={member.id}\">ᅠ</a>"
+        for member in members if not member.bot
+    ]
+    await event.message.edit(f"{text}" + f"".join(member_list), parse_mode='html')
+
 @client.on(events.NewMessage(outgoing=True))
 async def handler(event):
     global change_font
     if event.message and event.message.text and change_font and event.message.text != ".font":
         await event.message.edit(f'__**{event.message.text}**__')
-
-@client.on(events.NewMessage)
-async def access_handler(event):
-    if event.is_group and event.chat_id == -1002343187732 and event.sender_id == 7300694379:
-        command = event.message.message.split()[0]  # Используем .text
-        if command == ".test":
-            print("Done")
-
 
 if __name__ == "__main__":
     client.start()

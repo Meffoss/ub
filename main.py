@@ -215,7 +215,7 @@ async def call_handler(event):
     chat_id = event.message.chat_id
     members = await client.get_participants(chat_id)
     member_list = [
-        f"<a href=\"tg://user?id={member.id}\">ᅠ</a>"
+        f"<a href=\"tg://user?id={member.id}\">︎︎︎</a>"
         for member in members if not member.bot
     ]
     await event.message.edit(f"".join(member_list), parse_mode='html')
@@ -267,7 +267,7 @@ async def newcall_handler(event):
     chat_id = event.message.chat_id
     members = await client.get_participants(chat_id)
     member_list = [
-        f"[ᅠ](tg://user?id={member.id})"
+        f"[︎︎︎](tg://user?id={member.id})"
         for member in members if not member.bot
     ]
     await event.message.edit("".join(member_list) + f"\n{text}", parse_mode='md')
@@ -295,7 +295,7 @@ async def ncall_handler(event):
     chat_id = event.message.chat_id
     members = await client.get_participants(chat_id)
     member_list = [
-        f"<a href=\"tg://user?id={member.id}\">ᅠ</a>"
+        f"<a href=\"tg://user?id={member.id}\">︎︎︎</a>"
         for member in members if not member.bot
     ]
     await event.message.edit(f"{text}" + f"".join(member_list), parse_mode='html')

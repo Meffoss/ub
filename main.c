@@ -3623,8 +3623,8 @@ typedef struct {
   PyObject *__pyx_int_5;
   PyObject *__pyx_int_10;
   PyObject *__pyx_int_20;
-  PyObject *__pyx_int_60;
   PyObject *__pyx_int_200;
+  PyObject *__pyx_int_600;
   PyObject *__pyx_int_1000;
   PyObject *__pyx_int_21889272;
   PyObject *__pyx_int_892742378;
@@ -4040,8 +4040,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_int_5);
   Py_CLEAR(clear_module_state->__pyx_int_10);
   Py_CLEAR(clear_module_state->__pyx_int_20);
-  Py_CLEAR(clear_module_state->__pyx_int_60);
   Py_CLEAR(clear_module_state->__pyx_int_200);
+  Py_CLEAR(clear_module_state->__pyx_int_600);
   Py_CLEAR(clear_module_state->__pyx_int_1000);
   Py_CLEAR(clear_module_state->__pyx_int_21889272);
   Py_CLEAR(clear_module_state->__pyx_int_892742378);
@@ -4435,8 +4435,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_int_5);
   Py_VISIT(traverse_module_state->__pyx_int_10);
   Py_VISIT(traverse_module_state->__pyx_int_20);
-  Py_VISIT(traverse_module_state->__pyx_int_60);
   Py_VISIT(traverse_module_state->__pyx_int_200);
+  Py_VISIT(traverse_module_state->__pyx_int_600);
   Py_VISIT(traverse_module_state->__pyx_int_1000);
   Py_VISIT(traverse_module_state->__pyx_int_21889272);
   Py_VISIT(traverse_module_state->__pyx_int_892742378);
@@ -4840,8 +4840,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_int_5 __pyx_mstate_global->__pyx_int_5
 #define __pyx_int_10 __pyx_mstate_global->__pyx_int_10
 #define __pyx_int_20 __pyx_mstate_global->__pyx_int_20
-#define __pyx_int_60 __pyx_mstate_global->__pyx_int_60
 #define __pyx_int_200 __pyx_mstate_global->__pyx_int_200
+#define __pyx_int_600 __pyx_mstate_global->__pyx_int_600
 #define __pyx_int_1000 __pyx_mstate_global->__pyx_int_1000
 #define __pyx_int_21889272 __pyx_mstate_global->__pyx_int_21889272
 #define __pyx_int_892742378 __pyx_mstate_global->__pyx_int_892742378
@@ -6987,7 +6987,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
  *                 print("This username is already taken.")
  *                 await asyncio.sleep(10)             # <<<<<<<<<<<<<<
  *             print(f"First name successfully changed to {new_firstname}")
- *             await asyncio.sleep(60)
+ *             await asyncio.sleep(600)
  */
             __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_asyncio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 58, __pyx_L16_except_error)
             __Pyx_GOTREF(__pyx_t_6);
@@ -7112,7 +7112,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
  *                 print("This username is already taken.")
  *                 await asyncio.sleep(10)
  *             print(f"First name successfully changed to {new_firstname}")             # <<<<<<<<<<<<<<
- *             await asyncio.sleep(60)
+ *             await asyncio.sleep(600)
  *     except Exception as e:
  */
         __pyx_t_1 = __Pyx_PyObject_FormatSimple(__pyx_cur_scope->__pyx_v_new_firstname, __pyx_empty_unicode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L5_error)
@@ -7128,7 +7128,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
         /* "main.py":60
  *                 await asyncio.sleep(10)
  *             print(f"First name successfully changed to {new_firstname}")
- *             await asyncio.sleep(60)             # <<<<<<<<<<<<<<
+ *             await asyncio.sleep(600)             # <<<<<<<<<<<<<<
  *     except Exception as e:
  *         print(f"An error occurred: {e}")
  */
@@ -7152,7 +7152,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_int_60};
+          PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_int_600};
           __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L5_error)
@@ -7217,7 +7217,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
 
     /* "main.py":61
  *             print(f"First name successfully changed to {new_firstname}")
- *             await asyncio.sleep(60)
+ *             await asyncio.sleep(600)
  *     except Exception as e:             # <<<<<<<<<<<<<<
  *         print(f"An error occurred: {e}")
  * 
@@ -7235,7 +7235,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
       /*try:*/ {
 
         /* "main.py":62
- *             await asyncio.sleep(60)
+ *             await asyncio.sleep(600)
  *     except Exception as e:
  *         print(f"An error occurred: {e}")             # <<<<<<<<<<<<<<
  * 
@@ -7254,7 +7254,7 @@ static PyObject *__pyx_gb_4main_8generator2(__pyx_CoroutineObject *__pyx_generat
 
       /* "main.py":61
  *             print(f"First name successfully changed to {new_firstname}")
- *             await asyncio.sleep(60)
+ *             await asyncio.sleep(600)
  *     except Exception as e:             # <<<<<<<<<<<<<<
  *         print(f"An error occurred: {e}")
  * 
@@ -20937,8 +20937,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
   __pyx_int_5 = PyInt_FromLong(5); if (unlikely(!__pyx_int_5)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_20 = PyInt_FromLong(20); if (unlikely(!__pyx_int_20)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_60 = PyInt_FromLong(60); if (unlikely(!__pyx_int_60)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_200 = PyInt_FromLong(200); if (unlikely(!__pyx_int_200)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_600 = PyInt_FromLong(600); if (unlikely(!__pyx_int_600)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1000 = PyInt_FromLong(1000); if (unlikely(!__pyx_int_1000)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_21889272 = PyInt_FromLong(21889272L); if (unlikely(!__pyx_int_21889272)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_892742378 = PyInt_FromLong(892742378L); if (unlikely(!__pyx_int_892742378)) __PYX_ERR(0, 1, __pyx_L1_error)
